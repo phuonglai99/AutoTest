@@ -1,5 +1,6 @@
 package Pom;
 
+<<<<<<< HEAD
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -43,4 +44,7 @@ public class BMIPage {
     public String getErrorMsg(){
         return driver.findElement(textErrormsg).getText();
     }
+=======
+public class BMIPage {
+>>>>>>> 876375782bda4c72b9f53af915ee83c35155a73b
 }

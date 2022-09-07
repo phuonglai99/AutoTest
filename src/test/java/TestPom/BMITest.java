@@ -1,5 +1,6 @@
 package TestPom;
 
+<<<<<<< HEAD
 import Pom.BMIPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -57,4 +58,7 @@ public class BMITest {
     public void close(){
         driver.close();
     }
+=======
+public class BMITest {
+>>>>>>> 876375782bda4c72b9f53af915ee83c35155a73b
 }
