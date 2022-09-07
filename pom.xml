@@ -58,15 +58,13 @@
             <scope>compile</scope>
         </dependency>
 
-<<<<<<< HEAD
+
         <dependency>
             <groupId>com.github.ozlerhakan</groupId>
             <artifactId>poiji</artifactId>
             <version>3.1.1</version>
         </dependency>
-=======
 
->>>>>>> 876375782bda4c72b9f53af915ee83c35155a73b
     </dependencies>
 
 </project>
