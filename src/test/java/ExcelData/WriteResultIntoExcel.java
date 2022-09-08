@@ -1,4 +1,4 @@
-package POJO;
+package ExcelData;
 
 public class WriteResultIntoExcel {
 }
