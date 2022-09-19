@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class HyperLinkPage {
     private WebDriver driver;
 
-    public HyperLinkPage() {
+    public HyperLinkPage(WebDriver driver) {
+        this.driver = driver;
     }
 
     public void clikOnLink(String link) {

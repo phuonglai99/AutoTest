@@ -40,10 +40,16 @@ public class BMITest {
                                         {new bmiData("2","Male","120","-20","Please provide positive weight value.")},
                                         {new bmiData("121","Male","-120","0","Please provide an age between 2 and 120.\n" +
                                                                 "Please provide positive height value.\n" +
-                                                                "Please provide positive weight value.")}
-                       };
-        System.out.println(readExcel());
-        System.out.println(ret[1][0]);
+                                                                "Please provide positive weight value.")},
+                                        {new bmiData("gg","Male","gg","40","Please provide an age between 2 and 120.\n" +
+                                                                "Please provide positive height value.\n")},
+                                        {new bmiData("90","Male","180","kk", "Please provide positive weight value.")},
+                                        {new bmiData("","Male","","40","Please provide an age between 2 and 120.\n" +
+                                                "Please provide positive height value.\n")},
+                                        {new bmiData("","Male","180","","Please provide an age between 2 and 120.\n" +
+                                                "Please provide positive height value.\n")}
+
+                                                               };
         return ret;
     }
     @DataProvider (name = "test-data-valid")
@@ -72,7 +78,7 @@ public class BMITest {
             bmiPage.clickOnClearButton();
             bmiPage.fillData(bmi.getAge(),bmi.getGender(),bmi.getHeight(),bmi.getWeight());
             bmiPage.clickOnCalulateButton();
-            Assert.assertEquals(bmiPage.getErrorMsg(),bmi.getExpectedResults() );
+            Assert.assertEquals(bmiPage.getResults(),bmi.getExpectedResults() );
 
     }
     @Test(dataProvider ="test-data-invalid")

@@ -25,7 +25,6 @@ public class CheckboxPage {
 
         public boolean isSelected(int index) {
             List<WebElement> checkboxs = this.driver.findElements(this.checkbox);
-            System.out.println(((WebElement)checkboxs.get(index - 1)).getText());
             return ((WebElement)checkboxs.get(index - 1)).isSelected();
         }
 
