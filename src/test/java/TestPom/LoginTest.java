@@ -37,8 +37,23 @@ public class LoginTest {
     }
 
     @Test
-    void withInvalidAccount() {
+    void withWrongPassword() {
         this.loginPage.fillAccount("tomsmith", "SuperSecretPassword");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
+    }
+
+    void withWrongUsername() {
+        this.loginPage.fillAccount("tomsmit", "SuperSecretPassword!");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
+    }
+
+    void withEmptyPassword() {
+        this.loginPage.fillAccount("tomsmith", "");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
+    }
+
+    void withEmptyUsername() {
+        this.loginPage.fillAccount("", "SuperSecretPassword");
         Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
     }
 
