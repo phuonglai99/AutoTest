@@ -24,4 +24,8 @@ public class SelectOptionPage {
         String ret = firstOption.getText();
         return ret;
     }
+
+    public void open(){
+        this.driver.get("https://the-internet.herokuapp.com/dropdown");
+    }
 }

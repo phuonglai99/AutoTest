@@ -13,15 +13,11 @@ import org.testng.annotations.Test;
 public class LoginTest {
     static WebDriver driver;
     LoginPage loginPage;
-    static String targetUrl = "https://the-internet.herokuapp.com/login";
-
-
 
     @BeforeClass
     void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get(targetUrl);
     }
 
     @BeforeMethod
@@ -42,16 +38,18 @@ public class LoginTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
     }
 
+    @Test
     void withWrongUsername() {
         this.loginPage.fillAccount("tomsmit", "SuperSecretPassword!");
         Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
     }
 
+    @Test
     void withEmptyPassword() {
         this.loginPage.fillAccount("tomsmith", "");
         Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");
     }
-
+    @Test
     void withEmptyUsername() {
         this.loginPage.fillAccount("", "SuperSecretPassword");
         Assert.assertEquals(driver.getCurrentUrl(), "https://the-internet.herokuapp.com/login");

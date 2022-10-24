@@ -3,6 +3,7 @@ package POJO;
 import com.poiji.annotation.ExcelCellName;
 import lombok.Data;
 
+
 @Data
 public class BMI {
     @ExcelCellName("Age")
@@ -15,5 +16,4 @@ public class BMI {
     private String weight;
     @ExcelCellName("ExpectedResults")
     private String expectedResults;
-
 }
